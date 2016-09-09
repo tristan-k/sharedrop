@@ -41,10 +41,6 @@ module.exports = function (environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
-    ENV.GOOGLE_ANALYTICS_ID = 'UA-41889586-2';
-  }
-
   ENV.exportApplicationGlobal = true;
 
   return ENV;
