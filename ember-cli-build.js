@@ -18,15 +18,6 @@ module.exports = function(defaults) {
             enabled: false
         },
 
-        inlineContent: {
-            "analytics": {
-                file: "app/analytics.html",
-                enabled: !!config.GOOGLE_ANALYTICS_ID,
-                postProcess: function (content) {
-                    return content.replace(/\{\{GOOGLE_ANALYTICS_ID\}\}/g, config.GOOGLE_ANALYTICS_ID);
-                }
-            }
-        }
   });
 
   // Use `app.import` to add additional libraries to the generated
