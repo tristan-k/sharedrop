@@ -15,13 +15,11 @@ var http = require('http'),
     cookieParser = require('cookie-parser'),
     cookieSession = require('cookie-session'),
     compression = require('compression'),
-    persona = require('express-persona'),
     uuid = require('node-uuid'),
     crypto = require('crypto'),
     FirebaseTokenGenerator = require("firebase-token-generator"),
     firebaseTokenGenerator = new FirebaseTokenGenerator(process.env.FIREBASE_SECRET),
     app = express(),
-    personaUrl= process.env.PERSONA_URL,
     secret = process.env.SECRET,
     base = ['dist'];
 
@@ -59,8 +57,6 @@ base.forEach(function (dir) {
 // API server
 //
 
-// Handle Persona authentication
-persona(app, { audience: personaUrl });
 
 app.get('/', function (req, res) {
     var root = path.join(__dirname, base[0]);
