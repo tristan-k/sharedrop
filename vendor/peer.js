@@ -166,9 +166,9 @@ exports.RTCPeerConnection = window.mozRTCPeerConnection || window.webkitRTCPeerC
 exports.RTCIceCandidate = window.mozRTCIceCandidate || window.RTCIceCandidate;
 var defaultConfig = {
     'iceServers': [{
-        'url': 'stun:stun.l.google.com:19302'
+        'url': 'stun:stun.sipgate.net'
     }, {
-        'urls': 'stun:stun.l.google.com:19302'
+        'urls': 'stun:stun.sipgate.net'
     }]
 };
 
